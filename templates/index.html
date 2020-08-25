@@ -1,0 +1,16 @@
+<h1>Custom User!</h1>
+
+{% if request.user.is_authenticated %}
+    <h3>Username: {{ request.user.username }}</h3>
+    <h3>Display Name: {{ request.user.display_name }}</h3>
+{% else %}
+    <h3>I don't know who you are! Please login!</h3>
+{% endif %}
+
+<h3>{{AUTH_USER_MODEL}}</h3>
+
+<a href="login/">Login</a>
+<a href="signup/">Signup</a>
+<a href="logout/">Logout</a>
+
+<span style="padding-right: 30px;"></span>
